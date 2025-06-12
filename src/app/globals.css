@@ -1,26 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap");
+
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+/* Tailwind CSS imports (KEEP THESE) */
+/* @tailwind base;
+@tailwind components; */
+/* @tailwind utilities; */
+
+/* Global Reset */
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Root Variables */
+:root {
+  --background: #ffffff;
+  --font-family-mp: "Manrope", sans-serif;
+  /* -font-family-mw: "Merriweather", serif; */
+  --font-family-g: "Georgia", serif;
+
+  --font-size-base: 1.2rem;
+  --primary-color: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    /* --background: #0a0a0a; */
     --foreground: #ededed;
   }
 }
 
+/* Global Reset  */
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/*  Global Element Styles */
 body {
+  font-size: var(--font-size-base);
+  color: var(--primary-color);
+  font-family: var(--font-family);
   background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  overflow: visible !important;
+}
+
+button {
+  cursor: pointer;
+  /* border: none; */
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.heading{
+  font-family: "Georgia", serif;
 }
